@@ -1,0 +1,156 @@
+/*-- scss:defaults --*/
+
+$primary: #385898 !default;
+$font-family-sans-serif: "Lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+/*-- scss:rules --*/
+
+/* Lato build from https://github.com/applecuckoo/lato-builds */
+
+@font-face {
+    font-display: swap;
+    font-family: "Lato";
+    src: url("fonts/Lato-VF.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Lato";
+    src: url("fonts/Lato-Italic-VF.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrainsMono-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-feature-settings: "calt", "liga";
+}
+
+/* Cover image shadow */
+img.quarto-cover-image {
+    border: 1px solid rgb(206, 212, 218);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
+}
+
+/* Unfixing font-smoothing */
+body {
+    -webkit-font-smoothing: auto;
+}
+
+/* Workshop details card */
+.workshop-details {
+    border-left: 4px solid $primary;
+    background-color: rgba($primary, .05);
+    border-radius: .375rem;
+    padding: .75rem 1.25rem;
+    margin-block: 1.5rem 2rem;
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    li {
+        padding-block: .15rem;
+    }
+}
+
+/* Section headings */
+h2 {
+    border-bottom: 2px solid rgba($primary, .2);
+    padding-bottom: .35rem;
+}
+
+h3 {
+    color: $primary;
+    margin-top: 2rem;
+}
+
+/* Steps: a little breathing room between items */
+main ol > li {
+    margin-bottom: 1rem;
+}
+
+/* Screenshots */
+main img:not(.quarto-cover-image):not(.no-frame) {
+    border: 1px solid rgb(206, 212, 218);
+    border-radius: .375rem;
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .08);
+    margin-block: .5rem;
+}
+
+/* Heading inside the details card */
+.workshop-details h2 {
+    border-bottom: none;
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+/* Resources section */
+#resources ul {
+    padding-left: 1.25rem;
+}
+
+#resources li {
+    margin-bottom: .4rem;
+}
+
+/* Center all images (fig-align only applies to captioned figures) */
+main img {
+    display: block;
+    margin-inline: auto;
+}
+
+/* Instructor cards */
+.instructors {
+    margin-block: 1rem 1.5rem;
+}
+
+.instructor {
+    border: 1px solid rgb(206, 212, 218);
+    border-top: 3px solid $primary;
+    border-radius: .375rem;
+    padding: .9rem 1.1rem;
+
+    p {
+        margin-bottom: .35rem;
+    }
+
+    p:nth-child(2) {
+        color: $text-muted;
+        font-size: .9rem;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+        font-size: .9rem;
+    }
+}
+
+/* Book section */
+.book {
+    align-items: start;
+    margin-block: 1rem 1.5rem;
+}
+
+main img.book-cover {
+    max-width: 220px;
+    width: 100%;
+    border-radius: .25rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+}

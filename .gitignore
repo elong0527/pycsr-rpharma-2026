@@ -1,0 +1,7 @@
+.DS_Store
+.quarto/
+/.luarc.json
+
+# Rendered output (published to gh-pages by `quarto publish`)
+index.html
+index_files/

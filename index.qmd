@@ -1,0 +1,191 @@
+---
+title: "Python & Positron for Clinical Study Reports and Submissions"
+author:
+  - Michael Chow
+  - Yilong Zhang
+  - Isabella Velásquez
+date: 2026-09-28
+subtitle: R/Pharma 2026
+format:
+  html:
+    theme: [default, custom.scss]
+    toc: true
+    toc-title: "On this page"
+    toc-location: right
+    smooth-scroll: true
+    lightbox: true
+    fig-align: center
+---
+
+## About the workshop
+
+Open-source programming languages are rapidly transforming clinical research and development, offering modern, flexible capabilities for data analysis, visualization, and regulatory reporting. This workshop introduces the foundational skills for leveraging Python and Positron, Posit's next generation integrated development environment (IDE) created specifically for data science, to build reproducible workflows, prepare tables, listings, and figures (TLFs), and assemble submission-ready electronic Common Technical Document (eCTD) packages.
+
+This is an evolution of the Python for Clinical Study Report and Submission workshop presented at R/Pharma 2025, with package updates, consideration for recent AI workflows, and highlighting the use of Positron. Attendees will explore end-to-end project execution using the modern Python toolchain (including uv, polars, plotnine, and rtflite) and gain a practical roadmap for clinical trial reporting based on the open-source book [*Python for Clinical Study Reports and Submission*](https://pycsr.org).
+
+Designed for clinical programmers, statisticians, and data scientists, this hands-on session demonstrates how Python, together with Positron's rich data exploration environment, provides an intuitive and efficient alternative to traditional clinical workflows.
+
+## About the instructors
+
+::: {.grid .instructors}
+
+::: {.g-col-12 .g-col-md-4 .instructor}
+**Michael Chow**
+
+Principal Software Engineer, Posit (Open Source)
+
+[LinkedIn](https://www.linkedin.com/in/michael-a-chow/)
+:::
+
+::: {.g-col-12 .g-col-md-4 .instructor}
+**Yilong Zhang**
+
+Meta & AI Committee Member, BBSW
+
+[LinkedIn](https://www.linkedin.com/in/yilongzhang/)
+:::
+
+::: {.g-col-12 .g-col-md-4 .instructor}
+**Isabella Velásquez**
+
+Sr. Developer Advocate,<br>Posit
+
+[LinkedIn](https://www.linkedin.com/in/ivelasq/)
+:::
+
+:::
+
+## About the book
+
+::: {.grid .book}
+
+::: {.g-col-12 .g-col-md-4}
+[![](images/cover.jpg){.no-frame .book-cover fig-alt="Cover of Python for Clinical Study Reports and Submission by Yilong Zhang and Nan Xiao."}](https://pycsr.org/)
+:::
+
+::: {.g-col-12 .g-col-md-8}
+[*Python for Clinical Study Reports and Submission*](https://pycsr.org/) by Yilong Zhang and Nan Xiao is a free, open-source guide to planning, building, and automating clinical study reports (CSRs) in Python, from data and analyses to tables, listings, and figures (TLFs). The workshop follows its approach, and the demo project's analysis files line up with the book's TLF chapters.
+
+**What's inside**
+
+- [**Environment and toolchain**](https://pycsr.org/env-dev.html): setting up Python, managing projects with uv, and the package toolchain.
+- [**Clinical trial project**](https://pycsr.org/tlf-overview.html): step-by-step TLFs for disposition, study population, baseline characteristics, adverse events, and ANCOVA efficacy analysis.
+- [**Analysis package**](https://pycsr.org/pkg-overview.html): organizing analysis code as a Python package.
+- [**eCTD submission**](https://pycsr.org/submission-overview.html): preparing a submission package and running a dry run.
+
+[Read the book](https://pycsr.org/){.btn .btn-primary} [Source on GitHub](https://github.com/nanxstats/pycsr){.btn .btn-outline-primary}
+
+Working in R? The companion book [*R for Clinical Study Reports and Submission*](https://r4csr.org/) covers the same workflow.
+:::
+
+:::
+
+## Workshop instructions
+
+Complete the steps below to follow along with the workshop.
+
+### Project instructions
+
+1. Sign up for a [Posit Cloud](https://posit.cloud/) account **using the email you used to register for R/Pharma**.
+
+2. Head to the workshop space:
+
+    [Join the workshop space](https://posit.cloud/spaces/824153/join?access_code=cd2__Ae-cOR3APnbC-dc-p3PY066KHZuLQlPKkVU){.btn .btn-primary}
+
+3. Click into the eSubmission Demo project.
+
+    ![](images/posit-cloud.png){.no-frame fig-alt="The workshop space in Posit Cloud, showing the eSubmission Demo project."}
+
+4. If you want to keep a permanent copy, click "Save a Permanent Copy" in the top right.
+
+    ![](images/permanent-copy.png){fig-alt="The Save a Permanent Copy button in the top right of the project."}
+
+5. Click **Open > Open Folder > project > demo-py-esub > OK**.
+
+    ![](images/open-folder.gif){.no-frame fig-alt="Opening the demo-py-esub folder from the Open Folder menu."}
+
+::: {.callout-tip}
+## You're in!
+
+Now you're in the project, with uv installed and running! You can verify by checking out the interpreter selector, which should read **"uv: demo001"**.
+:::
+
+![](images/interpreter.png){fig-alt="The interpreter selector showing uv: demo001."}
+
+From here, you can open the folders and files in the File Explorer on the left-hand side.
+
+![](images/file-explorer.png){.no-frame fig-alt="The File Explorer on the left-hand side of Positron."}
+
+### Posit Assistant instructions
+
+Complete the steps below to set up Posit Assistant, Posit's AI assistant for data science.
+
+::: {.callout-important}
+## About your Posit AI credit
+
+- To use the workshop's Posit AI credit, you must be signed in to Posit Cloud with **the email you used to register for R/Pharma**.
+- Your Posit AI account comes with **$2 of credit**. Step 6 switches the model to **GLM 5.3 Flash**, which costs a fraction of the default model, so your credit lasts through the workshop.
+:::
+
+1. In the left-hand blue Activity Bar, click the Posit Assistant logo.
+    * You may have to click the three dots and select "Posit Assistant" if you do not see it.
+
+    ![](images/posit-assistant-logo.png){.no-frame fig-alt="The Posit Assistant logo and the More options button in the Activity Bar."}
+
+2. Click **Help me set it up**.
+
+    ![](images/posit-assistant.png){fig-alt="The Posit Assistant panel with the Help me set it up button." width=40%}
+
+3. Click **Configure AI providers**.
+
+    ![](images/posit-assistant-setup.png){fig-alt="The Configure AI providers option." width=40%}
+
+4. Click **Posit AI**, then **Sign in**.
+
+    ![](images/posit-ai.png){fig-alt="The Posit AI provider with the Sign in button." width=40%}
+
+5. Click **OK** in the dialog box, authorize Posit Cloud, then return to your Posit Cloud tab.
+
+    ![](images/posit-ai-auth.gif){.no-frame fig-alt="Authorizing Posit Cloud to use Posit AI."}
+
+6. Click the model name in the bottom right corner of the Posit Assistant panel and select **GLM 5.3 Flash**.
+
+    ![](images/model-options.png){fig-alt="The model menu in Posit Assistant, listing GLM 5.3 Flash at 0.07x cost." width=40%}
+
+7. Type your prompts in the **Ask Posit Assistant...** box at the bottom of the panel.
+
+    ![](images/prompt-window.png){fig-alt="The Ask Posit Assistant prompt box at the bottom of the Posit Assistant panel." width=40%}
+
+::: {.callout-tip}
+## Not sure where to start?
+
+Ask Posit Assistant *"What skills do you have?"* to see what it can help with.
+:::
+
+## Resources
+
+### The book and demo project
+
+- [**Python for Clinical Study Reports and Submission**](https://pycsr.org): the open-source book this workshop is based on, covering tables, listings, and figures (TLFs) and submission packages in Python.
+- [**demo-py-esub**](https://github.com/elong0527/demo-py-esub): the demo project we use in the workshop, a Python package that organizes analysis scripts for a clinical study report.
+
+### Positron and Posit tools
+
+- [**Download Positron**](https://positron.posit.co/download.html): install Positron locally to keep working after the workshop.
+- [**Posit Cloud**](https://posit.cloud/): run Positron in your browser, no installation needed.
+- [**Posit Assistant**](https://positron.posit.co/assistant.html): the AI assistant built into Positron.
+- [**Posit AI**](https://posit.ai/): Posit's managed AI service for Posit Assistant. See the [setup guide](https://posit-dev.github.io/assistant/docs/getting-started/posit-ai/).
+- [**RTF Preview**](https://open-vsx.org/extension/elong0527/vs-rtf-preview): Yilong Zhang's Positron extension for previewing RTF tables, listings, and figures without leaving the IDE. It converts RTF to PDF using LibreOffice, which must be installed.
+
+### The Python toolchain
+
+- [**uv**](https://docs.astral.sh/uv/): fast Python package and project manager.
+- [**polars**](https://docs.pola.rs/): fast DataFrame library for data manipulation.
+- [**plotnine**](https://plotnine.org/): grammar of graphics plotting for Python.
+- [**rtflite**](https://pharmaverse.github.io/rtflite/): lightweight RTF generation for clinical tables, listings, and figures.
+- [**pkglite**](https://pharmaverse.github.io/py-pkglite/): packs source code into portable text files for eCTD submission, and restores them to their original structure.
+- [**Quarto**](https://quarto.org/): open-source publishing system for reproducible documents, used for the analysis files in the demo project.
+
+### Community
+
+- [**R/Pharma**](https://rinpharma.com/): the conference hosting this workshop, with talks and workshops on open-source tools in pharma.
